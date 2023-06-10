@@ -1,0 +1,153 @@
+<!-- File name: services
+Student’s Name: Simarpreet Kaur Kang
+StudentID: 301279280
+Date: 9 June 2023 -->
+
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+   <style>
+    body {
+  padding-bottom: 100px;
+  min-height: fit-content;
+  min-width: 100vw;
+}
+
+h1 span {
+  font-style: italic;
+}
+
+h1 span:hover {
+  color: purple;
+  opacity: 0.8;
+  transition: color 0.3s ease;
+}
+
+.top {
+  padding: 50px;
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topleft,
+.topright {
+  display: flex;
+}
+
+.topright {
+  width: 30vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topright a {
+  text-decoration: none;
+}
+
+.topright a:hover {
+  color: purple;
+  opacity: 0.8;
+  transition: color 0.3s ease;
+}
+
+.carddiv {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  flex-direction: column;
+}
+
+.flex {
+  width: 70vw;
+  padding: 20px;
+  background-color: rgba(255, 255, 255);
+  border-radius: 8px;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2,
+h3,
+h4 {
+  color: black;
+}
+
+.flex img {
+  border-radius: 2px;
+  width: auto;
+  height: 200px;
+}
+
+.flex a {
+  text-decoration: none;
+ 
+}
+
+.propertysummary {
+  text-align: center;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+   </style>
+
+<main class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to <%= title %> page</h1>
+    </div>
+    <hr>
+
+    <div class="carddiv">
+      <div class="flex">
+        <div class="pl1">
+          
+      <div style="text-align: center">
+        <h1>Services provided</h1>
+      </div>
+      <hr>
+          <p style="text-align: center; align-content: center;">
+            <img src="./img/services.jpg">
+            <img src="./img/services2.jpg">
+            <img src="./img/services3.jpg">
+            <p style="text-align: left">Specialized in comprehensive web development services tailored to your unique needs. Our offerings include:
+            </p>
+              <ol>
+              <li>
+                <strong>Website Development:</strong> With expertise in creating 
+                visually stunning and functional websites, we build your online 
+                presence from scratch or using popular CMS platforms like WordPress, 
+                Drupal, or Joomla. The websites give seamless navigation, optimized 
+                performance, and a user-friendly experience.
+              </li>
+              <li>
+                <strong>Front-End Development:</strong> Determined to create captivating and interactive interfaces using HTML, CSS, and JavaScript. Responsive design and ensuring your website looks great on any device is always prioritized.
+              </li>
+              <li>
+                <strong>Back-End Development:</strong> Handling complex server-side functionality using PHP or Node.js. Motive is to ensure your website runs smoothly and efficiently behind the scenes.
+              </li>
+            </ol>
+            
+            <p>Beyond the basics, we offer responsive design, e-commerce solutions, and expert SEO and performance optimization. Partner with us to create a cutting-edge website that stands out. Contact us today to discuss your project and make a lasting impression online. 
+        </p>
+          <br />
+          <p style="text-align: center">
+            <b>Interested?</b> Feel free to contact me for more info
+          </p>
+        </div>
+      </div>
+
+    </main>
+    <br><br>
+    <!--bottom nav-->
+   
+   
+      <!--script section-->
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+   

@@ -1,0 +1,250 @@
+<!-- File name: contact
+Student’s Name: Simarpreet Kaur Kang
+StudentID: 301279280
+Date: 9 June 2023 -->
+
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+<style>
+* {
+  font-weight: bold;
+}
+body {
+  min-height: fit-content;
+  padding-bottom: 50px;
+  min-width: 100vw;
+}
+
+
+.top {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topleft,
+.topright {
+  display: flex;
+}
+
+.topright {
+  width: 30vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topright a {
+  text-decoration: none;
+}
+
+.topright a:hover {
+  color: purple;
+  opacity: 0.8;
+
+}
+
+.carddiv h1 {
+  text-align: center;
+}
+
+.carddiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  padding: 30px;
+  height: fit-content;
+  width: 70vw;
+  border-radius: 15px;
+  background-color: rgb(172, 210, 228);
+  border-color: black;
+}
+
+h2 {
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  column-gap: 5rem;
+  row-gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flexinside {
+  border: 2px solid;
+  border-radius: 8px;
+  display: flex;
+  column-gap: 5rem;
+  row-gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+
+}
+
+.flexinside input,
+select, option {
+  border-color: dimgray;
+  background-color: azure;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.verticalflex {
+  display: flex;
+  align-items: center;
+}
+input{
+  border-color: dimgray;
+  background-color: azure;
+}
+
+.verticalflex input {
+  color: rgb(226, 198, 198);
+}
+
+textarea {
+  color: rgb(226, 198, 198);
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.submit {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.submit input {
+  color: black;
+  border: 1px solid rgb(16, 15, 15);
+  font-weight: 800;
+  padding: 10px 30px;
+  border-radius: 30px;
+
+
+}
+</style>
+
+<main class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to <%= title %> page</h1>
+    </div>
+    <hr>
+    <ul>
+      <li>Phone: 419-XXX-XXXX</li>
+      <li>Instagram: <a href="www.instagram.com">www.instagram.com</a></li>
+      <li>Twitter: <a href="www.twitter.com">www.twitter.com</a></li>
+      <li>Facebook: <a href="www.facebook.com">www.facebook.com</a></li>
+    </ul>
+
+    <div class="carddiv">
+      <div class="card">
+          <h2>Contact Form</h2>
+        <form class="flex" id="contactForm" action="/home" method="GET">
+    
+          <fieldset class="flexinside">
+            <legend style="color: black"></legend>
+            <div>
+              <label for="fname">First name:</label>
+              <input
+                type="text"
+                id="fname"
+                name="fname"/>
+            </div>
+            <div>
+              <label for="lname">Last name:</label>
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+              
+              />
+            </div>
+            <div>
+              <label for="phone">Phone:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+             
+              />
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+               
+              />
+            </div>
+          </fieldset>
+
+          <fieldset class="flexinside">
+            <legend style="color: black"></legend>
+            <div>
+              <label for="type">Type Of website</label>
+              <select id="type" name="property">
+                <option>(Select)</option>
+                <option>Business</option>
+                <option>Blogging</option>
+                <option>Personal</option>
+              </select>
+            </div>
+           
+           
+            <div class="verticalflex">
+              <label for="price">Price(0.5-10Million): &nbsp; </label>
+              <input type="range" id="price" name="price" min="0" max="10" />
+            </div>
+          </fieldset>
+          <fieldset class="flexinside" style="width: 100%">
+            <legend>
+              <b>Additional Comments</b>
+            </legend>
+
+            <div style="width: 100%">
+              <label for="comment">Comments: &nbsp; </label>
+
+              <textarea
+                style="width: 100%; color:black;"
+                rows="5"
+                name="comment"
+                id="comment"></textarea>
+            </div>
+          </fieldset>
+          <div class="submit">
+            <input type="submit" value="Submit Form" />
+            <input type="reset" value="Reset" onclick="resetForm()" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <br><br>
+
+    
+    </main>
+    
+    <!--bottom nav-->
+    
+   
+   
+      <!--script section-->
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+   

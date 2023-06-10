@@ -1,0 +1,168 @@
+<!-- File name: projects
+Student’s Name: Simarpreet Kaur Kang
+StudentID: 301279280
+Date: 9 June 2023 -->
+
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/main_nav.ejs') %>
+   <style>
+
+h1 span {
+  font-style: italic;
+}
+
+h1 span:hover {
+  color: purple;
+  opacity: 0.8;
+  transition: color 0.3s ease;
+}
+
+.top {
+  padding: 50px;
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topleft,
+.topright {
+  display: flex;
+}
+
+.topright {
+  width: 30vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topright a {
+  text-decoration: none;
+  color: rgb(31, 30, 28);
+}
+
+.topright a:hover {
+  color: purple;
+  opacity: 0.8;
+  transition: color 0.3s ease;
+}
+
+.carddiv {
+  color: rgb(18, 17, 16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "pl1 pl2 pl3";
+  justify-content: center;
+  align-items: center;
+  grid-gap: 3rem;
+}
+
+.pl1 {
+  grid-area: pl1;
+}
+
+.pl2 {
+  grid-area: pl2;
+}
+.pl3 {
+  grid-area: pl3;
+}
+
+.pl1,
+.pl2,
+.pl3 {
+  width: 28vw;
+  height: fit-content;
+  padding: 30px;
+  background-color: rgba(255, 255, 255);
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+.grid img {
+  width: 100%;
+  height: 27vh;
+}
+
+.grid a {
+  text-decoration: none;
+  color: rgb(15, 15, 14);
+}
+#img1,#img2,#img3{
+  border: 2px solid black;
+  border-radius: 5px;
+}
+   </style>
+
+<main class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to Projects page</h1>
+    </div>
+    <hr>
+
+
+    <div class="grid">
+      <a href="http://studentweb.cencol.ca/skang89/Assignment%203%20Simarpreet%20Kaur%20Kang/Assignment3_Simar.html">
+        <div class="pl1">
+          <img src="./img/project1.png" alt="" id="img1"/>
+          <br />
+          <br />
+          <h3>ACER Laptop website:</h3>
+          <p></p>
+          <p>
+             Informational website to search about or buy laptop from ACER Aspire series
+          </p>
+          <p>
+            Developed in November 2022
+          </p>
+          </div>
+      </a>
+
+      <a href="http://studentweb.cencol.ca/skang89/Individual%20project%20Simarpreet%20Kaur%20Kang/Individual%20project.html">
+        <div class="pl2">
+          <img src="./img/project2.png" alt=""  id="img2"/>
+          <br /><br />
+          <h3>Church website:</h3>
+         <br>
+          <p>
+               Designing a web application for church- about, timings, location and other pages.
+          </p>
+          <p>Working since 4 months</p>
+        </div>
+      </a>
+
+      <a href="http://studentweb.cencol.ca/skang89/Assignment%204%20Simarpreet%20Kaur%20Kang/Assignment%204.html">
+        <div class="pl3">
+          <img src="./img/project3.png" alt=""  id="img3"/>
+          <br />
+          <br>
+          <h3>Conestoga College's form: </h3>
+          <br>
+          <p>
+              Developed a form for students of Conestoga College, Ontario 
+              about course evaluation. 
+          </p>
+          <p>Developed in January 2023</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <br><br>
+
+
+    </main>
+    <!--bottom nav-->
+   
+   
+      <!--script section-->
+      <%- include ('partials/bottom_nav.ejs') %>
+      <%- include ('partials/footer.ejs') %>
+   
